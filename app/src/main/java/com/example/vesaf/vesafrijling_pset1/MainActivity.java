@@ -15,6 +15,39 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (savedInstanceState != null) {
+            if (savedInstanceState.getBoolean("ARMS_VISIBILITY")) {
+                findViewById(R.id.arms).setVisibility(VISIBLE);
+            }
+            if (savedInstanceState.getBoolean("EARS_VISIBILITY")) {
+                findViewById(R.id.ears).setVisibility(VISIBLE);
+            }
+            if (savedInstanceState.getBoolean("EYEBROWS_VISIBILITY")) {
+                findViewById(R.id.eyebrows).setVisibility(VISIBLE);
+            }
+            if (savedInstanceState.getBoolean("EYES_VISIBILITY")) {
+                findViewById(R.id.eyes).setVisibility(VISIBLE);
+            }
+            if (savedInstanceState.getBoolean("GLASSES_VISIBILITY")) {
+                findViewById(R.id.glasses).setVisibility(VISIBLE);
+            }
+            if (savedInstanceState.getBoolean("HAT_VISIBILITY")) {
+                findViewById(R.id.hat).setVisibility(VISIBLE);
+            }
+            if (savedInstanceState.getBoolean("MOUTH_VISIBILITY")) {
+                findViewById(R.id.mouth).setVisibility(VISIBLE);
+            }
+            if (savedInstanceState.getBoolean("MUSTACHE_VISIBILITY")) {
+                findViewById(R.id.mustache).setVisibility(VISIBLE);
+            }
+            if (savedInstanceState.getBoolean("NOSE_VISIBILITY")) {
+                findViewById(R.id.nose).setVisibility(VISIBLE);
+            }
+            if (savedInstanceState.getBoolean("SHOES_VISIBILITY")) {
+                findViewById(R.id.shoes).setVisibility(VISIBLE);
+            }
+        }
     }
 
     public void onCheckboxClicked(View view) {
@@ -58,6 +91,42 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             image.setVisibility(INVISIBLE);
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        if (findViewById(R.id.arms).getVisibility() == View.VISIBLE) {
+            outState.putBoolean("ARMS_VISIBILITY", true);
+        }
+        if (findViewById(R.id.ears).getVisibility() == View.VISIBLE) {
+            outState.putBoolean("EARS_VISIBILITY", true);
+        }
+        if (findViewById(R.id.eyebrows).getVisibility() == View.VISIBLE) {
+            outState.putBoolean("EYEBROWS_VISIBILITY", true);
+        }
+        if (findViewById(R.id.eyes).getVisibility() == View.VISIBLE) {
+            outState.putBoolean("EYES_VISIBILITY", true);
+        }
+        if (findViewById(R.id.glasses).getVisibility() == View.VISIBLE) {
+            outState.putBoolean("GLASSES_VISIBILITY", true);
+        }
+        if (findViewById(R.id.hat).getVisibility() == View.VISIBLE) {
+            outState.putBoolean("HAT_VISIBILITY", true);
+        }
+        if (findViewById(R.id.mouth).getVisibility() == View.VISIBLE) {
+            outState.putBoolean("MOUTH_VISIBILITY", true);
+        }
+        if (findViewById(R.id.mustache).getVisibility() == View.VISIBLE) {
+            outState.putBoolean("MUSTACHE_VISIBILITY", true);
+        }
+        if (findViewById(R.id.nose).getVisibility() == View.VISIBLE) {
+            outState.putBoolean("NOSE_VISIBILITY", true);
+        }
+        if (findViewById(R.id.shoes).getVisibility() == View.VISIBLE) {
+            outState.putBoolean("SHOES_VISIBILITY", true);
         }
     }
 }
