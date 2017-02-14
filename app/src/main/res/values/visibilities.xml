@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hat_visibility">invisible</string>
+    <string name="shoes_visibility">invisible</string>
+    <string name="arms_visibility">invisible</string>
+    <string name="ears_visibility">invisible</string>
+    <string name="eyebrows_visibility">invisible</string>
+    <string name="eyes_visibility">invisible</string>
+    <string name="glasses_visibility">invisible</string>
+    <string name="mouth_visibility">invisible</string>
+    <string name="mustache_visibility">invisible</string>
+    <string name="nose_visibility">invisible</string>
+</resources>
